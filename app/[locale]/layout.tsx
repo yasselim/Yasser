@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Space_Grotesk, Inter, IBM_Plex_Sans_Arabic, JetBrains_Mono } from 'next/font/google';
@@ -52,7 +52,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!hasLocale(routing.locales, locale)) {
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
   }
 
