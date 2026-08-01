@@ -15,11 +15,39 @@
   "topbar": {
     "addEntry": "Add Entry",
     "language": "Language",
-    "toggleTheme": "Toggle theme"
+    "toggleTheme": "Toggle theme",
+    "signIn": "Sign in",
+    "signOut": "Sign out"
   },
   "common": {
     "comingSoon": "Coming soon",
     "comingSoonBody": "This section is scaffolded as part of the platform foundation and will be built out in a later phase."
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "checkEmail": "Check your email to confirm your account.",
+    "genericError": "Something went wrong. Please check your details and try again.",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "signIn": {
+      "title": "Sign in",
+      "subtitle": "Welcome back — track your progress.",
+      "cta": "Sign in"
+    },
+    "signUp": {
+      "title": "Create your free account",
+      "subtitle": "Save your history permanently, for free.",
+      "cta": "Create account"
+    }
+  },
+  "dailyLog": {
+    "weightLabel": "Weight (kg)",
+    "dietLabel": "Diet notes",
+    "save": "Save"
+  },
+  "dashboard": {
+    "noData": "Log your weight in the Daily Log to see your trend here."
   },
   "pages": {
     "dashboard": {

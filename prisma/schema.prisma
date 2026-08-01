@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// Mirrors Supabase's auth.users (id) with the app-level profile fields from
+// the product spec's `users` table (§6). Not named "users" to avoid
+// colliding with Supabase's own auth schema.
+model Profile {
+  id            String     @id @db.Uuid
+  email         String     @unique
+  locale        String     @default("en")
+  heightCm      Float?     @map("height_cm")
+  goalWeightKg  Float?     @map("goal_weight_kg")
+  sex           String?
+  dob           DateTime?  @db.Date
+  activityLevel String?    @map("activity_level")
+  mobilityNotes String?    @map("mobility_notes")
+  createdAt     DateTime   @default(now()) @map("created_at")
+  dailyLogs     DailyLog[]
+
+  @@map("profiles")
+}
+
+model DailyLog {
+  id        String   @id @default(uuid()) @db.Uuid
+  userId    String   @map("user_id") @db.Uuid
+  profile   Profile  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  logDate   DateTime @map("log_date") @db.Date
+  weightKg  Float?   @map("weight_kg")
+  dietNotes String?  @map("diet_notes")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([userId, logDate])
+  @@map("daily_logs")
+}
