@@ -1,0 +1,54 @@
+{
+  "app": {
+    "name": "Health & Labs"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "dailyLog": "Daily Log",
+    "labResults": "Lab Results",
+    "myResults": "My Results",
+    "labGlossary": "Lab Test Glossary",
+    "dietPlan": "Diet Plan Generator",
+    "healthLibrary": "Health Library",
+    "settings": "Settings"
+  },
+  "topbar": {
+    "addEntry": "Add Entry",
+    "language": "Language",
+    "toggleTheme": "Toggle theme"
+  },
+  "common": {
+    "comingSoon": "Coming soon",
+    "comingSoonBody": "This section is scaffolded as part of the platform foundation and will be built out in a later phase."
+  },
+  "pages": {
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Your weight trend and progress at a glance."
+    },
+    "dailyLog": {
+      "title": "Daily Log",
+      "subtitle": "Track your weight and diet day by day."
+    },
+    "myResults": {
+      "title": "My Results",
+      "subtitle": "Your personal lab result history."
+    },
+    "labGlossary": {
+      "title": "Lab Test Glossary",
+      "subtitle": "Plain-language explanations for common lab tests."
+    },
+    "dietPlan": {
+      "title": "Diet Plan Generator",
+      "subtitle": "A rule-based plan built from your inputs."
+    },
+    "healthLibrary": {
+      "title": "Health Library",
+      "subtitle": "Short educational articles on conditions and tests."
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Manage your profile, units, and preferences."
+    }
+  }
+}
